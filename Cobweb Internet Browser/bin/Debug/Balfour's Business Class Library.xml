@@ -1,0 +1,950 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Balfour&apos;sBusinessClassLibrary
+</name>
+</assembly>
+<members>
+<member name="T:BalfoursBusinessClassLibrary.BBEWBXSerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBEThemeFileSerial">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BlackRabbitScriptInterpreter">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBEBBCSerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Info.#ctor">
+	<summary>Wenn using this constructor the Image property must be set before accessing properties.</summary>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Info.#ctor(System.String)">
+	<summary>Creates Info Class to read properties of an Image given from a file.</summary>
+	<param name="imageFileName">A string specifiing image file name on a file system.</param>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Info.#ctor(System.Drawing.Image)">
+	<summary>Creates Info Class to read properties of a given Image object.</summary>
+	<param name="anImage">An Image object to analise.</param>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.Image">
+	<summary>Sets or returns the current Image object.</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.PixXDim">
+	<summary>
+ Type is PropertyTagTypeShort or PropertyTagTypeLong
+Information specific to compressed data. When a compressed file is recorded, the valid width of the meaningful image must be recorded in this tag, whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file.
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.PixYDim">
+	<summary>
+ Type is PropertyTagTypeShort or PropertyTagTypeLong
+ Information specific to compressed data. When a compressed file is recorded, the valid height of the meaningful image must be recorded in this tag whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file. Because data padding is unnecessary in the vertical direction, the number of lines recorded in this valid image height tag will be the same as that recorded in the SOF.
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.XResolution">
+	<summary>
+Number of pixels per unit in the image width (x) direction. The unit is specified by PropertyTagResolutionUnit
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.YResolution">
+	<summary>
+Number of pixels per unit in the image height (y) direction. The unit is specified by PropertyTagResolutionUnit.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.ResolutionUnit">
+	<summary>
+Unit of measure for the horizontal resolution and the vertical resolution.
+2 - inch 3 - centimeter
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.Brightness">
+	<summary>
+Brightness value. The unit is the APEX value. Ordinarily it is given in the range of -99.99 to 99.99.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.EquipMake">
+	<summary>
+ The manufacturer of the equipment used to record the image.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.EquipModel">
+	<summary>
+ The model name or model number of the equipment used to record the image.
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.Copyright">
+	<summary>
+Copyright information.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.DateTime">
+	<summary>
+Date and time the image was created.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.DTOrig">
+	<summary>
+Date and time when the original image data was generated. For a DSC, the date and time when the picture was taken. 
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.DTDigitized">
+	<summary>
+Date and time when the image was stored as digital data. If, for example, an image was captured by DSC and at the same time the file was recorded, then DateTimeOriginal and DateTimeDigitized will have the same contents.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.ISOSpeed">
+	<summary>
+ISO speed and ISO latitude of the camera or input device as specified in ISO 12232.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.Orientation">
+	<summary>
+Image orientation viewed in terms of rows and columns.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.FocalLength">
+	<summary>
+Actual focal length, in millimeters, of the lens. Conversion is not made to the focal length of a 35 millimeter film camera.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.FNumber">
+	<summary>
+F number.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.ExposureProg">
+	<summary>
+Class of the program used by the camera to set exposure when the picture is taken.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.MeteringMode">
+	<summary>
+Metering mode.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Info.PropertyItems">
+	<summary>
+ Returns a Hashtable of all available Properties of a gieven Image. Keys of this Hashtable are
+ Display names of the Property Tags and values are transformed (typed) data.
+</summary>
+	<example>
+		<code>
+ if (openFileDialog.ShowDialog()==DialogResult.OK)
+	{
+		Info inf=new Info(Image.FromFile(openFileDialog.FileName));
+		listView.Items.Clear();
+		foreach (string propertyname in inf.PropertyItems.Keys)
+		{
+			ListViewItem item1 = new ListViewItem(propertyname,0);
+		    item1.SubItems.Add((inf.PropertyItems[propertyname]).ToString());
+			listView.Items.Add(item1);
+		}
+	}
+ </code>
+	</example>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.Info">
+	<summary>This Class retrives Image Properties using Image.GetPropertyItem() method 
+ and gives access to some of them trough its public properties. Or to all of them
+ trough its public property PropertyItems.
+</summary>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.#ctor(System.Drawing.Imaging.PropertyItem)">
+	<summary></summary>
+	<param name="aPropertyItem"></param>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.Type">
+	<summary>Specifies the data type of the values stored in the value of that PropertyItem object. Note that this are not ordinary .NET types.</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.Id">
+	<summary>Id of a Property Tag</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.TagName">
+	<summary>Display Name of a Property Tag</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.Value">
+	<summary>Transformed value of the PropertyItem.Value byte array.</summary>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.getValue(System.Drawing.Imaging.PropertyItem)">
+	<summary>Transformes value of the PropertyItem.Value byte array to apropriate .NET Framework type.</summary>
+	<param name="aPropertyItem"></param>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.PropertyTag.getNameFromId(BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId)">
+	<summary>Returns the Display Name of a Property Item. The current imlementation will return a name of the Enumeration member.</summary>
+	<param name="aId">PropertyId to get description for.</param>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.#ctor(System.Int32,System.Int32)">
+	<summary>Creates a Fraction Number having Numerator and Denumerator.</summary>
+	<param name="num">Numerator</param>
+	<param name="den">Denumerator</param>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.#ctor(System.UInt32,System.UInt32)">
+	<summary>Creates a Fraction Number having Numerator and Denumerator.</summary>
+	<param name="num">Numerator</param>
+	<param name="den">Denumerator</param>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.#ctor(System.Int32)">
+	<summary>Creates a Fraction Number having only Numerator and assuming Denumerator=1.</summary>
+	<param name="num">Numerator</param>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.ToString">
+	<summary>Used to display Fraction numbers like 12/17.</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Fraction.Numerator">
+	<summary>The Numerator</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.ImagingTools.Fraction.Denumerator">
+	<summary>The Denumerator</summary>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.op_Addition(BalfoursBusinessClassLibrary.ImagingTools.Fraction,BalfoursBusinessClassLibrary.ImagingTools.Fraction)">
+	<summary>Overloades operator + </summary>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.op_Multiply(BalfoursBusinessClassLibrary.ImagingTools.Fraction,BalfoursBusinessClassLibrary.ImagingTools.Fraction)">
+	<summary>Overloades operator * </summary>
+</member><member name="M:BalfoursBusinessClassLibrary.ImagingTools.Fraction.op_Implicit(BalfoursBusinessClassLibrary.ImagingTools.Fraction)~System.Double">
+	<summary>Retrives double value of a Frction number. Enables casting to double.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ResolutionUnit.dpi">
+	<summary>Dots Per Inch</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ResolutionUnit.dpcm">
+	<summary>Centimeters Per Inch</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.ResolutionUnit">
+	<summary>
+Unit of measure used for the horizontal resolution and the vertical resolution.
+</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.TopLeft">
+	<summary>The 0th row is at the top of the visual image, and the 0th column is the visual left side.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.TopRight">
+	<summary>The 0th row is at the visual top of the image, and the 0th column is the visual right side.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.BottomLeft">
+	<summary>The 0th row is at the visual bottom of the image, and the 0th column is the visual right side.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.BottomRight">
+	<summary>The 0th row is at the visual bottom of the image, and the 0th column is the visual right side.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.LeftTop">
+	<summary>The 0th row is the visual left side of the image, and the 0th column is the visual top.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.RightTop">
+	<summary>The 0th row is the visual right side of the image, and the 0th column is the visual top.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.RightBottom">
+	<summary>The 0th row is the visual right side of the image, and the 0th column is the visual bottom.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.Orientation.LeftBottom">
+	<summary>The 0th row is the visual left side of the image, and the 0th column is the visual bottom.</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.Orientation">
+	<summary>
+Image orientation viewed in terms of rows and columns.
+</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Undefined">
+	<summary>not defined</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Manual">
+	<summary>manual</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Normal">
+	<summary>normal program</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Aperture">
+	<summary>aperture priority</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Shutter">
+	<summary>shutter priority</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Creative">
+	<summary>creative program (biased toward depth of field)</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Action">
+	<summary>action program (biased toward fast shutter speed)</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Portrait">
+	<summary>portrait mode (for close-up photos with the background out of focus)</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Landscape">
+	<summary>landscape mode (for landscape photos with the background in focus)</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg.Reserved">
+	<summary>9 to 255 - reserved</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.ExposureProg">
+	<summary>
+ Class of the program used by the camera to set exposure when the picture is taken.
+</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.Unknown">
+	<summary>Unknown</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.Average">
+	<summary>Average</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.CenterWeightedAverage">
+	<summary>Center weighted average</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.Spot">
+	<summary>Spot</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.MultiSpot">
+	<summary>Multi Spot</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.Pattern">
+	<summary>Pattern</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.Partial">
+	<summary>Partial</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode.Other">
+	<summary>Other</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.MeteringMode">
+	<summary>
+ Metering mode
+</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.PixelFormat4bppIndexed">
+	<summary>Specifies that the format is 4 bits per pixel, indexed.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.Byte">
+	<summary>Specifies that the value data member is an array of bytes.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.ASCII">
+	<summary>Specifies that the value data member is a null-terminated ASCII string. If you set the type data member of a PropertyItem object to PropertyTagTypeASCII, you should set the length data member to the length of the string including the NULL terminator. For example, the string HELLO would have a length of 6.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.Short">
+	<summary>Specifies that the value data member is an array of unsigned short (16-bit) integers.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.Long">
+	<summary>Specifies that the value data member is an array of unsigned long (32-bit) integers.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.Rational">
+	<summary>Specifies that the value data member is an array of pairs of unsigned long integers. Each pair represents a fraction; the first integer is the numerator and the second integer is the denominator.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.Undefined">
+	<summary>Specifies that the value data member is an array of bytes that can hold values of any data type.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.SLONG">
+	<summary>Specifies that the value data member is an array of signed long (32-bit) integers.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType.SRational">
+	<summary>Specifies that the value data member is an array of pairs of signed long integers. Each pair represents a fraction; the first integer is the numerator and the second integer is the denominator.</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagType">
+	<summary>
+ Specifies the data type of the values stored in the value data member of that same PropertyItem object.
+</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.Artist">
+	<summary>Null-terminated character string that specifies the name of the person who created the image.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.BitsPerSample">
+	<summary>Number of bits per color component. See also SamplesPerPixel.</summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.CellHeight">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.CellWidth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ChrominanceTable">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ColorMap">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ColorTransferFunction">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.Compression">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.Copyright">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.DateTime">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.DocumentName">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.DotRange">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.EquipMake">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.EquipModel">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifAperture">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifBrightness">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifCfaPattern">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifColorSpace">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifCompBPP">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifCompConfig">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifDTDigitized">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifDTDigSS">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifDTOrig">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifDTOrigSS">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifDTSubsec">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifExposureBias">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifExposureIndex">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifExposureProg">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifExposureTime">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFileSource">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFlash">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFlashEnergy">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFNumber">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFocalLength">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFocalResUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFocalXRes">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFocalYRes">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifFPXVer">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifIFD">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifInterop">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifISOSpeed">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifLightSource">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifMakerNote">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifMaxAperture">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifMeteringMode">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifOECF">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifPixXDim">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifPixYDim">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifRelatedWav">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifSceneType">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifSensingMethod">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifShutterSpeed">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifSpatialFR">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifSpectralSense">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifSubjectDist">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifSubjectLoc">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifUserComment">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExifVer">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ExtraSamples">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.FillOrder">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.FrameDelay">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.FreeByteCounts">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.FreeOffset">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.Gamma">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GlobalPalette">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsAltitude">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsAltitudeRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestBear">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestBearRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestDist">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestDistRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestLat">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestLatRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestLong">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsDestLongRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsGpsDop">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsGpsMeasureMode">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsGpsSatellites">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsGpsStatus">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsGpsTime">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsIFD">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsImgDir">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsImgDirRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsLatitude">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsLatitudeRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsLongitude">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsLongitudeRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsMapDatum">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsSpeed">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsSpeedRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsTrack">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsTrackRef">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GpsVer">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GrayResponseCurve">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GrayResponseUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.GridSize">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneDegree">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneHints">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneLPI">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneLPIUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneMisc">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneScreen">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HalftoneShape">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.HostComputer">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ICCProfile">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ICCProfileDescriptor">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ImageDescription">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ImageHeight">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ImageTitle">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ImageWidth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.IndexBackground">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.IndexTransparent">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.InkNames">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.InkSet">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGACTables">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGDCTables">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGInterFormat">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGInterLength">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGLosslessPredictors">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGPointTransforms">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGProc">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGQTables">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGQuality">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.JPEGRestartInterval">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.LoopCount">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.LuminanceTable">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.MaxSampleValue">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.MinSampleValue">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.NewSubfileType">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.NumberOfInks">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.Orientation">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PageName">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PageNumber">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PaletteHistogram">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PhotometricInterp">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PixelPerUnitX">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PixelPerUnitY">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PixelUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PlanarConfig">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.Predictor">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PrimaryChromaticities">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PrintFlags">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PrintFlagsBleedWidth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PrintFlagsBleedWidthScale">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PrintFlagsCrop">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.PrintFlagsVersion">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.REFBlackWhite">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ResolutionUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ResolutionXLengthUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ResolutionXUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ResolutionYLengthUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ResolutionYUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.RowsPerStrip">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SampleFormat">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SamplesPerPixel">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SMaxSampleValue">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SMinSampleValue">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SoftwareUsed">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SRGBRenderingIntent">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.StripBytesCount">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.StripOffsets">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.SubfileType">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.T4Option">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.T6Option">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TargetPrinter">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThreshHolding">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailArtist">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailBitsPerSample">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailColorDepth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailCompressedSize">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailCompression">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailCopyRight">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailData">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailDateTime">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailEquipMake">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailEquipModel">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailFormat">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailHeight">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailImageDescription">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailImageHeight">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailImageWidth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailOrientation">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailPhotometricInterp">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailPlanarConfig">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailPlanes">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailPrimaryChromaticities">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailRawBytes">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailRefBlackWhite">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailResolutionUnit">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailResolutionX">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailResolutionY">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailRowsPerStrip">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailSamplesPerPixel">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailSize">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailSoftwareUsed">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailStripBytesCount">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailStripOffsets">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailTransferFunction">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailWhitePoint">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailWidth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailYCbCrCoefficients">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailYCbCrPositioning">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.ThumbnailYCbCrSubsampling">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TileByteCounts">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TileLength">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TileOffset">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TileWidth">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TransferFunction">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.TransferRange">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.WhitePoint">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.XPosition">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.XResolution">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.YCbCrCoefficients">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.YCbCrPositioning">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.YCbCrSubsampling">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.YPosition">
+	<summary></summary>
+</member><member name="F:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId.YResolution">
+	<summary></summary>
+</member><member name="T:BalfoursBusinessClassLibrary.ImagingTools.PropertyTagId">
+	<summary>
+ The following Enumeration gives list (and descriptions) of the property items supported in EXIF format.
+</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.BBEWEESerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMTextFunctions">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBEWUXSerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMNetworking">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBEQuicArtSerial">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMMathematics">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="P:BalfoursBusinessClassLibrary.BrowserExtendedNavigatingEventArgs.Url">
+	<summary>
+ The URL to navigate to
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.BrowserExtendedNavigatingEventArgs.Frame">
+	<summary>
+ The name of the frame to navigate to
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.BrowserExtendedNavigatingEventArgs.NavigationContext">
+	<summary>
+ The flags when opening a new window
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.BrowserExtendedNavigatingEventArgs.AutomationObject">
+	<summary>
+ The pointer to ppDisp
+ </summary>
+</member><member name="M:BalfoursBusinessClassLibrary.BrowserExtendedNavigatingEventArgs.#ctor(System.Object,System.Uri,System.String,BalfoursBusinessClassLibrary.UrlContext)">
+	<summary>
+ Creates a new instance of WebBrowserExtendedNavigatingEventArgs
+ </summary>
+	<param name="automation">Pointer to the automation object of the browser</param>
+	<param name="url">The URL to go to</param>
+	<param name="frame">The name of the frame</param>
+	<param name="navigationContext">The new window flags</param>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.None">
+	<summary>
+ No information Present
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.Unloading">
+	<summary>
+ The page is unloading. This flag is set in response to the onbeforeunload and onunload events. 
+ Some pages load pop-up windows when you leave them rather than when you enter. This flag is used to identify those situations.
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.UserInited">
+	<summary>
+ The call to INewWindowManager::EvaluateNewWindow is the result of a user-initiated action 
+ (a mouse click or key press). Use this flag in conjunction with the NWMF_FIRST_USERINITED flag 
+ to determine whether the call is a direct or indirect result of the user-initiated action.
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.UserFirstInited">
+	<summary>
+ When NWMF_USERINITED is present, this flag indicates that the call to 
+ INewWindowManager::EvaluateNewWindow is the first query that results from this user-initiated action. 
+ Always use this flag in conjunction with NWMF_USERINITED.
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.OverrideKey">
+	<summary>
+ The override key (ALT) was pressed. The override key is used to bypass the pop-up manager�allowing 
+ all pop-up windows to display�and must be held down at the time that INewWindowManager::EvaluateNewWindow is called. 
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.ShowHelp">
+	<summary>
+ The new window attempting to load is the result of a call to the showHelp method. Help is sometimes displayed in a separate window, 
+ and this flag is valuable in those cases.
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.HtmlDialog">
+	<summary>
+ The new window is a dialog box that displays HTML content.
+ </summary>
+</member><member name="F:BalfoursBusinessClassLibrary.UrlContext.FromProxy">
+	<summary>
+ Indicates that the EvaluateNewWindow method is being called through a marshalled Component Object Model (COM) proxy 
+ from another thread. In this situation, the method should make a decision and return immediately without performing 
+ blocking operations such as showing modal user interface (UI). Lengthy operations will cause the calling thread to 
+ appear unresponsive.
+ </summary>
+</member><member name="T:BalfoursBusinessClassLibrary.BBEQuickQuizUltraExtension">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMComputerSystemDetails">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMIPEngine">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMGreenPrint">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMFileInformation">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMConversion">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBEBIFSerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBETutorialMasterSerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBEBBASerials">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMImageFunctions">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="T:BalfoursBusinessClassLibrary.BBMOracleConfigurations">
+By using this DLL you are agreeing to Balfour's Business Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Balfour's Business'''
+
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.About">
+	<summary>
+  Looks up a localized string similar to Credits for the Balfour's Business Class Library go to the following people:
+
+Jamie Balfour - main development
+Michael Balfour - graphical development
+Predrag Gruevski - transparent listview
+Eduardo Oliveira - for the MDI tab control
+Mav Northwind - for the hyperlink system that is built into the textbox
+Microsoft - for .NET Framework, the extension of the richtextbox and their controls
+
+Licenses are seperate for individual controls, extensions and resources, however, a generic license covering the [rest of string was truncated]";.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.BlockedSite">
+	<summary>
+  Looks up a localized string similar to &lt;html&gt;
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Language" content="en-gb"&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=windows-1252"&gt;
+&lt;title&gt;This website is blocked&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;font face="Arial"&gt;Balfour's Business Flycatcher has detected an issue!&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;font face="Arial"&gt;
+&lt;img border="0" src="Warning.jpg" width="256" height="256" align="left"&gt;&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;font face="Arial"&gt;This website is blocked.&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font fac [rest of string was truncated]";.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.FBLike">
+	<summary>
+  Looks up a localized string similar to &lt;iframe src="http://www.facebook.com/plugins/like.php?app_id=161449653917906&amp;amp;href=SOMEWEBSITE&amp;amp;send=true&amp;amp;layout=standard&amp;amp;width=450&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=arial&amp;amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"&gt;&lt;/iframe&gt;.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.PageError">
+	<summary>
+  Looks up a localized string similar to &lt;html&gt;
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Language" content="en-gb"&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=windows-1252"&gt;
+&lt;title&gt;Cobweb Error&lt;/title&gt;
+&lt;script language="JavaScript" fptype="dynamicoutline"&gt;
+&lt;!--
+function dynOutline() {}
+//--&gt;
+&lt;/script&gt;
+&lt;script language="JavaScript1.2" fptype="dynamicoutline" src="file:///C:/Program%20Files%20(x86)/Microsoft%20Office/OFFICE11/fpclass/outline.js"&gt;
+&lt;/script&gt;
+&lt;script language="JavaScript1.2" fptype="dynamicoutline" for="document" [rest of string was truncated]";.
+</summary>
+</member><member name="P:BalfoursBusinessClassLibrary.My.Resources.Resources.SecurityPassHTML">
+	<summary>
+  Looks up a localized string similar to &lt;html&gt;
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Language" content="en-gb"&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=windows-1252"&gt;
+&lt;title&gt;New Page 1&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;font face="Arial"&gt;Security Pass&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face="Arial" size="2"&gt;From the choices below; please select a security 
+level. &lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;font face="Arial" size="2"&gt;&lt;a href="sec.html"&gt;&lt;font color="#FF9900"&gt;Low 
+Security&lt;/font&gt;&lt;/a&gt;&lt;font color="#FF9900"&gt; - allows access to moderate security [rest of string was truncated]";.
+</summary>
+</member><member name="T:BalfoursBusinessClassLibrary.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:BalfoursBusinessClassLibrary.BBCTransparentListView.#ctor">
+	<summary>
+ Creates a new TransparentListView object.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:BalfoursBusinessClassLibrary.BBCTransparentListView.ErrorTextColor">
+	<summary>
+ The color to use when a certain ListViewItem has unresolved issues.
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.BBCTransparentListView.HighlightColor">
+	<summary>
+ The color to use when highlighting an item.
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.BBCTransparentListView.RedrawInterval">
+	<summary>
+ The intervals at which to redraw the control when scrolling. Higher values are reccomended for less powerful CPUs.
+ Decrease this value if experiencing choppy redraws during scrolling. Values below 5-6ms may result in extreme CPU use.
+ </summary>
+</member><member name="P:BalfoursBusinessClassLibrary.BBCTransparentListView.RedrawOnMouseMove">
+	<summary>
+ True if the control should be redrawn when the mouse is moved, otherwise False.
+ </summary>
+	<remarks>There have been some issues with the Set method, so it's temporarily disabled and has no effect.</remarks>
+</member>
+</members>
+</doc>

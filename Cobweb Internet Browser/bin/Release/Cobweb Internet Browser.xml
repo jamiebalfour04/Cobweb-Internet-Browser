@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CobwebInternetBrowser
+</name>
+</assembly>
+<members>
+<member name="P:Cobweb_Internet_Browser.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Cobweb_Internet_Browser.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Cobweb_Internet_Browser.My.Resources.Resources.changelog">
+	<summary>
+  Looks up a localized string similar to Interface is created
+Address box is added
+Back and Forward buttons are created
+Work on the Yorkshire Hill Browser is started
+FlyCacther 2.0 is added with new improvements
+Print button is added
+Stop button is added
+Home button is added
+Glass theme is supported
+Interface is turned into a tabbed interface
+Search Page button is added
+Favourites button is added
+Show Favourites button is added
+Favourites panel is added
+Favourites panel is now improved, to average the favicon colour
+FavBar is added
+ [rest of string was truncated]";.
+</summary>
+</member><member name="T:Cobweb_Internet_Browser.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

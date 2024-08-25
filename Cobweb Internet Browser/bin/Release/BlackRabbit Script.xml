@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BlackRabbitScript
+</name>
+</assembly>
+<members>
+<member name="P:BlackRabbitScript.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BlackRabbitScript.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:BlackRabbitScript.My.Resources.Resources.BlackRabbit_2011_Updates">
+	<summary>
+  Looks up a localized string similar to BlackRabbit 2011 Routine Release version 1.1.1
+
+Version 1.1.1000
+Codename: Foghorn
+Release date: 01/07/2011
+Purpose: Distribution release
+Details:
+
+Added procedural read mode
+Added Command Address Lines such as the &lt;routine&gt; address
+Added support for adding multiple numbers together
+Added support for subtracting multiple numbers
+Added support for multiplication of multiple numbers
+Added support for division of multiple numbers
+Added support for obtaining the root of a number
+Added support for [rest of string was truncated]";.
+</summary>
+</member><member name="T:BlackRabbitScript.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:BlackRabbitScript.BlackRabbitScriptInterpreter">
+By using this DLL you are agreeing to Jamie Balfour's Closed-Source Terms and Conditions'''
+If this file is edited, you are breaching the terms and conditions set down by Jamie Balfour'''
+
+</member>
+</members>
+</doc>

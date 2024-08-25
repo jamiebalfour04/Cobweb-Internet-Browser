@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BalfoursBusinessExtensionLibrary
+</name>
+</assembly>
+<members>
+<member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.Eraser">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.Eyedrops">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.Grid5Pixels">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.Pencil">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.SmallTransparentZone">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.Spraycan">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.TransparentZone">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:BalfoursBusinessExtensionLibrary.My.Resources.Resources.VSProject_imagefile2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:BalfoursBusinessExtensionLibrary.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:BalfoursBusinessExtensionLibrary.Controls.BBCPopupItem">
+	<summary>
+ Provides an abstraction over the control that prevents users from performing methods on it 
+ apart from the ones specified.
+ </summary>
+</member>
+</members>
+</doc>
