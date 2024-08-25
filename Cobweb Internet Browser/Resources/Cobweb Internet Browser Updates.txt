@@ -1,0 +1,104 @@
+Cobweb Internet Browser
+Codename: Slateford
+Version 2.0.1.2
+Purpose: Beta Release, Platform Preview, Special Re-release due to immediate suspension of older version 1.0
+
+Details:
+
+Interface is created
+Address box is added
+Back and Forward buttons are created
+Work on the Yorkshire Hill Browser is started
+FlyCacther 2.0 is added with new improvements
+Print button is added
+Stop button is added
+Home button is added
+Glass theme is supported
+Interface is turned into a tabbed interface
+Search Page button is added
+Favourites button is added
+Show Favourites button is added
+Favourites panel is added
+Favourites panel is now improved, to average the favicon colour
+FavBar is added
+Delete FavBar favourite button is added
+Add to FavBar is added
+Status Bar is added
+Hide button is added
+Change settings button is added
+Search Box is added
+Address box is replaced with a new crossed textbox
+Favicon support is added
+Simple RSS viewer added
+Show RSS button is added
+Search Box is redesigned, for support in other software
+HyperMode is added
+Stocks and Shares toolbar is added
+AutoRefresh is removed
+Refresh button is removed, and added to the Go button
+Update stocks and shares button is added
+RSS viewer is removed in favour of the new 2012 RSS Viewer
+RSS Viewer is improved considerably
+Scrolling is enabled in the Favourites panel
+On screen keyboard tool is added to the address box
+Address Box removed in favour of new HyperBox
+Automatic updating of stocks is added
+Wingmail is added to Cobweb
+Quick Access toolbar is added
+Quick Access button is added
+New menu is added
+Installer is added
+FlyCatcher 3.0 is now an improved version of FlyCatcher 2.0, which can block popups
+Tabbed interface is used
+Scrolling is enabled on RSS Viewer
+New context menu is added
+FavBar is added
+Stocks and Shares bar is moved from status bar to the top
+Later List is added
+Add to Later List button is added
+View Later List button is added
+Theme is changed to dark theme
+Sites to visit is added to the BB Tab Menu
+Cobweb now stores history files of websites visited
+Search Page button is added to HyperBox
+Drop down for changing search provider is added
+Favicon efficiency is improved, local storage is now utilised
+Contacts selector is improved for Wingmail use
+Read out page is added
+Read out page button is added
+Zoom is added to the bottom bar
+100% zoom is added to the bottom bar
+Add to Later List button is added to the bottom bar
+A random news feed is added to Status Bar
+Refresh Random news feed button is added to bottom bar
+Delete favourites on the FavBar is acomplished by the FavBar
+The Change Settings button now shows a message rather than being disabled when a non-admin user presses it
+Hide buttons button is added to top bar
+Search Box is improved
+The ability to change the colour of links is added
+Send to Wonderword is added to the context menu
+QuickFill feature is added
+Added the ability to click on QuickFill in the context menu to add to the QuickFill list
+Mapping is added
+Translation is added
+The Add To context menu item is added
+Developer tools are added
+Fixed a flaw where popups would appear in the default browser instead of a new tab
+Fixed a flaw where new windows would not appear in a new tab
+Fixed a flaw where the HyperBox would blink when navigating
+Change Quick Access menu slightly
+Added Trident 10 support.
+News feed automatically shows new feeds at a custom interval 
+New thread specifically for news feed, improves performance
+Performance improvements on news feed, no longer downloads favicon everytime
+Fixed a startup flaw
+Created the side-by-side source feature
+Changed location of search page
+Added feature to prevent meta refresh occuring
+General improvement that stops the browser making sounds when changing page
+Added a title and cross to the options menu
+BlackRabbit 2.0 support
+Performance improvement that reduces the amount of work being done in the foreground and moves to seperate threads
+General performance improvements when starting up by reducing work load.
+Minor performance improvements
+Stocks do not refresh until the user has activate them each session

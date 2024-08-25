@@ -1,0 +1,38 @@
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.exe.config
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.exe
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.pdb
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.xml
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Balfour's Business Class Library.dll
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Balfour's Business Class Library.pdb
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Balfour's Business Class Library.xml
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\ResolveAssemblyReference.cache
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.CobwebBrowserChild.resources
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.CobwebMain.resources
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.Resources.resources
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\ResGen.read.1.tlog
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\ResGen.write.1.tlog
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.exe
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.xml
+e:\users\jamie balfour\documents\visual studio 2010\Projects\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.pdb
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.exe.config
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.exe
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.xml
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.pdb
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.exe
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.pdb
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.xml
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Balfour's Business Class Library.dll
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Balfour's Business Class Library.pdb
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Balfour's Business Class Library.xml
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.CobwebBrowserChild.resources
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.CobwebMain.resources
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.Resources.resources
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\ResGen.read.1.tlog
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\ResGen.write.1.tlog
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.exe.manifest
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Cobweb Internet Browser.application
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.exe.manifest
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb Internet Browser.application
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\obj\x86\Debug\Cobweb_Internet_Browser.CobwebUltraSplashScreen.resources
+E:\Balfour's Business Code of programs\Cobweb Internet Browser\Cobweb Internet Browser\bin\Debug\Interop.SHDocVw.dll
